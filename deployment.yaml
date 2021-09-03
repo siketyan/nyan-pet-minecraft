@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minecraft-deployment
+  namespace: minecraft
+spec:
+  selector:
+    matchLabels:
+      app: minecraft-app
+  template:
+    metadata:
+      labels:
+        app: minecraft-app
+    spec:
+      containers:
+      - name: minecraft
+        image: itzg/minecraft-server
+        ports:
+        - containerPort: 25565
+        volumeMounts:
+        - mountPath: /data
+          name: minecraft-data
+        env:
+        - name: EULA
+          value: "true"
+        - name: VERSION
+          value: "1.17.1"
