@@ -25,3 +25,7 @@ spec:
           value: "true"
         - name: VERSION
           value: "1.17.1"
+      volumes:
+      - name: minecraft-data
+        persistentVolumeClaim:
+          claimName: minecraft-volume-claim
