@@ -13,4 +13,11 @@ spec:
   storageClassName: minecraft-storage-class
   local:
     path: /srv/minecraft
-
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - centre.s6n.jp
