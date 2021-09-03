@@ -9,7 +9,7 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-  persistentVolumePolicy: Retain
+  persistentVolumeReclaimPolicy: Retain
   storageClassName: minecraft-storage-class
   local:
     path: /srv/minecraft
