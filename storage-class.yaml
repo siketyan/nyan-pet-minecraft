@@ -5,4 +5,3 @@ metadata:
   namespace: minecraft
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
-
