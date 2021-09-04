@@ -25,6 +25,13 @@ spec:
           value: "true"
         - name: VERSION
           value: "1.17.1"
+        resources:
+          limits:
+            cpu: 4
+            memory: 6Gi
+          requests:
+            cpu: 1
+            memory: 500Mi
       volumes:
       - name: minecraft-data
         persistentVolumeClaim:
