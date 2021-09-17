@@ -12,3 +12,4 @@ spec:
       targetPort: 25565
   externalIPs:
     - 172.16.2.1
+    - 127.0.0.1
