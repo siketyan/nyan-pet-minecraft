@@ -11,4 +11,4 @@ spec:
       port: 25565
       targetPort: 25565
   externalIPs:
-    - 172.16.2.1
+    {{- toYaml .Values.service.externalIPs | nident 4 }}
