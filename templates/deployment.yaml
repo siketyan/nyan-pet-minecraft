@@ -12,26 +12,7 @@ spec:
       labels:
         app: minecraft-app
     spec:
-      containers:
-      - name: minecraft
-        image: itzg/minecraft-server
-        ports:
-        - containerPort: 25565
-        volumeMounts:
-        - mountPath: /data
-          name: minecraft-data
-        env:
-        - name: EULA
-          value: "true"
-        - name: VERSION
-          value: "1.17.1"
-        resources:
-          limits:
-            cpu: 4
-            memory: 6Gi
-          requests:
-            cpu: 1
-            memory: 500Mi
+      containers: []
       volumes:
       - name: minecraft-data
         persistentVolumeClaim:
