@@ -15,7 +15,8 @@ spec:
       containers:
       - name: minecraft
         image: itzg/minecraft-server
-        ports: []
+        ports:
+        - containerPort: 25565
         volumeMounts:
         - mountPath: /data
           name: minecraft-data
