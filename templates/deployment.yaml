@@ -24,6 +24,8 @@ spec:
           value: "true"
         - name: VERSION
           value: "1.17.1"
+        - name: JVM_DD_OPTS
+          value: "log4j2.formatMsgNoLookups:true"
         resources:
           limits:
             cpu: 4
